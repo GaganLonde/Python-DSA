@@ -11,7 +11,7 @@ def spiralMatrix(arr):
 
     i , j = 0, 0
     
-    while (up_wall<=down_wall and left_wall<=right_wall):
+    while (up_wall<down_wall and left_wall<right_wall): # or len(result) != m * n
         if direction == "r":
             while j < right_wall:
                 result.append(arr[i][j])
