@@ -32,6 +32,15 @@ class linkedList:
                 prev.next = curr.next
                 curr = curr.next
             
+    def sortLL(self):
+        curr = self.head
+        while curr:
+            temp = curr.next
+            while temp:
+                if curr.data > temp.data:
+                    curr.data, temp.data = temp.data, curr.data
+                temp = temp.next
+            curr = curr.next
 
     def printNodes(self):
         if not self.head:
@@ -46,10 +55,12 @@ class linkedList:
 l = linkedList()
 l.insertAtEnd(1001)
 l.insertAtEnd(1002)
-l.insertAtEnd(1003)
+l.insertAtEnd(1005)
 l.insertAtEnd(1002)
 l.insertAtEnd(1004)
 l.insertAtEnd(1003)
 l.printNodes()
 l.uniqueElements()
+l.printNodes()
+l.sortLL()
 l.printNodes()
